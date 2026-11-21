@@ -63,7 +63,8 @@ Run the following as root (`su`) after rebooting.
 # Module is installed
 ls /data/adb/modules/R14C
 
-# Bind mounts succeeded (every line should start with "ok")
+# Bind mounts succeeded (every line should start with "ok";
+# a "FAILED" or "skip" line needs attention)
 cat /data/adb/modules/R14C/mount.log
 
 # service.sh ran and applied its changes

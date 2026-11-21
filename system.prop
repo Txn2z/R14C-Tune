@@ -1,0 +1,33 @@
+# R14C Tune v4.5 — system.prop
+# Screen recording optimizer + global UI smoothness for Helio G85 (MT6768) — Redmi 14C
+
+# --- Hardware Acceleration ---
+debug.sf.hw=1
+video.accelerate.hw=1
+media.stagefright.prefer-mediasync=1
+media.codec.priority=0
+media.stagefright.thumbnail.prefer_hw_codecs=1
+
+# --- SurfaceFlinger: anti-jitter, smooth rendering ---
+debug.sf.recomputecrop=0
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
+# --- HWUI Renderer ---
+debug.hwui.render_dirty_regions=false
+debug.hwui.disable_vsync=false
+debug.hwui.profile=false
+ro.hwui.render_ahead=1
+
+# --- Window Manager & Fling Velocity ---
+windowsmgr.max_events_per_sec=150
+ro.min.fling_velocity=160
+ro.max.fling_velocity=24000
+persist.sys.ui.hw=1
+
+# --- Dalvik Heap: reduce multitasking jank ---
+dalvik.vm.heapstartsize=16m
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=4m
+dalvik.vm.heapmaxfree=16m

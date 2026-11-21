@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+     Modified for R14C Tune — v4
+     Changes:
+     - max-video-encoder-input-buffers: 10 -> 20 (smoother encoding pipeline, less stutter)
+     - More buffers = the encoder does not wait on the screen capture thread
+-->
+<MediaCodecs>
+    <Settings>
+        <!-- Stock: 10 | v3: 16 | v4: 20 — smoother encoding pipeline, less stutter -->
+        <Setting name="max-video-encoder-input-buffers" value="20" />
+    </Settings>
+    <Include href="media_codecs_mediatek_audio.xml" />
+    <Include href="media_codecs_google_audio.xml" />
+</MediaCodecs>
